@@ -1,0 +1,143 @@
+<div style="width: 350px; height: 300px">
+<div data-dojo-type="dijit/layout/TabContainer" style="width: 100%; height: 100%;">
+   <div data-dojo-type="dijit/layout/ContentPane">
+      <table style="" class="form">
+         <tr>
+            <td>
+               <label id="layerSelectDropDown" for="layerSelect">Select layer: &nbsp;&nbsp;&nbsp;&nbsp;</label>
+            </td>
+            <td>
+               <select id="layerSelect" name="layerSelect" data-dojo-type="dijit/form/FilteringSelect"
+                  data-dojo-props="
+                  value: '',
+                  placeHolder: 'Select'" data-dojo-attach-event="onchange:_onChangeClicked" class="mdb-select md-form">
+                  <option value="" disabled selected>Select</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <label id="querySelectDropDown" for="querySelect">List of queries:       </label>
+            </td>
+            <td>
+               <select id="querySelect" name="querySelect" data-dojo-type="dijit/form/FilteringSelect"
+                  data-dojo-props="
+                  value: '',
+                  placeHolder: 'Select'" data-dojo-attach-event="onchange:_onBtnValidateClicked">
+                  <option value="" disabled selected>Select</option>
+                  <option value="Category">Select by Category</option>
+                  <option value="Expiry">Select by ExpiryDate</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <!-- <button data-dojo-type="dijit/form/Button" class="btn btn-primary btn-xs" data-dojo-attach-event="onclick:_onBtnValidateClicked" type="button" id="btn2">Continue</button> -->
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <label id="categoryTypeDropDown" for="categoryType">Category:       </label>
+            </td>
+            <td>
+               <select id="categoryType" name="categoryType" data-dojo-type="dijit/form/FilteringSelect"
+                  data-dojo-props="
+                  value: 'Select',
+                  placeHolder: 'Select'">
+                  <option value="" disabled selected>Select</option>
+                  <!--<option value="Alaska">Alaska</option>
+                     <option value="California">California</option>-->
+               </select>
+            </td>
+         </tr>
+         <!--<button data-dojo-type="dijit/form/Button" class="btn btn-primary btn-xs" data-dojo-attach-event="onclick:_onBtnValidateClicked" type="button" id="btn2">Continue</button> </br></br>-->
+         <tr>
+            <td>
+               <label id="featureTypeDropDown" for="featureType">Feature Type:       </label>
+            </td>
+            <td>
+               <select id="featureType" name="featureType" data-dojo-type="dijit/form/FilteringSelect"
+                  data-dojo-props="
+                  value: '',
+                  placeHolder: 'Select'">
+                  <option value="select" disabled selected>Select</option>
+                  <!--<option value="ELEV_ft">ELEV_ft</option>
+                     <option value="PROMINENCE_ft">PROMINENCE_ft</option>-->
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <label id="leaseDropDown">
+                  <h6> whose lease period will expire</h6>
+               </label>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <label id="conditionDropDown" for="condition">Select Condition:       </label>
+            </td>
+            <td>
+               <select id="condition" name="Condition" data-dojo-type="dijit/form/FilteringSelect"
+                  data-dojo-props="
+                  value: '',
+                  placeHolder: 'condition'" data-dojo-attach-event="onchange:_onChangeCondition">
+		  <option value="select" selected>Select</option>
+                  <option value="=">equal</option>
+                  <option value=">">after</option>
+                  <option value="<">before</option>
+                  <option value="AND">in between</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <label id="toDateDropDown" for="toDate">  From     </label>
+            </td>
+            <td>
+               <input type="text" name="toDate" value="From Date"
+                  data-dojo-type="dijit/form/TextBox"
+                  data-dojo-props="trim:true, propercase:true" id="fromHeight" /> 
+            </td>
+            <td>
+         </tr>
+         <tr>
+            <td>
+               <label id="andDropDown">
+                  <h6> And </h6>
+               <label>
+            </td>
+         </tr>
+         <tr>
+         <td>
+         <label id="fromDateDropDown" for="fromDate"> To     </label> 
+         </td>
+         <td>
+         <input type="text" name="fromDate" value="To Date"
+            data-dojo-type="dijit/form/TextBox"
+            data-dojo-props="trim:true, propercase:true" id="toHeight" /> 
+         </td>
+         </tr>
+         </br></br>
+         <tr>
+            <td>
+               <button data-dojo-type="dijit/form/Button" class="btn btn-primary btn-xs" data-dojo-attach-event="onclick:_onBtnSubmitClicked" type="button" id="btn1">Submit
+               </button> 
+            </td>
+            <td>   
+               <button data-dojo-type="dijit/form/Button" class="btn btn-primary btn-xs" data-dojo-attach-event="onclick:_onBtnClearClicked" type="button" id="btn4">Clear
+               </button> 
+            </td>
+	    <td>   
+               <!--<button data-dojo-type="dijit/form/Button" class="btn btn-primary btn-xs" data-dojo-attach-event="onclick:_onLoadWidgetBClick" type="button" id="btn4">Results
+               </button> 
+	       <span data-dojo-attach-point="loadWidgetBInfoNode"></span>-->
+            </td>
+         </tr>
+      </table>
+   </div>
+   <br />
+    <!--Layer List : <span id="layer_list"></span><br />-->
+    <br />
+   </div>
+</div>
